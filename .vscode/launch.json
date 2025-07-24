@@ -1,0 +1,49 @@
+{
+    "configurations": [
+        {
+            "name": "AL Project_Mazzoni",
+            "request": "launch",
+            "type": "al",
+            "environmentType": "Sandbox",
+            "environmentName": "SVILUPPO",
+            "tenant": "07663b3c-b0c3-4272-9a4d-cee5a0d9a97a",
+            "startupObjectType": "Page",
+            "startupObjectId": 9022,
+            "breakOnError": true,
+            "launchBrowser": true,
+            "enableLongRunningSqlStatements": true,
+            "enableSqlInformationDebugger": true,
+            "dependencyPublishingOption": "Default"
+        },
+        {
+            "name": "AL: Generated Download Symbols request",
+            "request": "launch",
+            "type": "al",
+            "environmentType": "Sandbox",
+            "environmentName": "SVILUPPO",
+            "tenant": "07663b3c-b0c3-4272-9a4d-cee5a0d9a97a"
+        },
+        {
+            "name": "AL: Generated Attach request",
+            "request": "attach",
+            "type": "al",
+            "environmentType": "Sandbox",
+            "environmentName": "SVILUPPO",
+            "sessionId": 39373,
+            "breakOnNext": "WebClient",
+            "breakOnError": "ExcludeTry",
+            "tenant": "07663b3c-b0c3-4272-9a4d-cee5a0d9a97a"
+        },
+        {
+            "name": "AL: Generated Snapshot request",
+            "request": "snapshotInitialize",
+            "type": "al",
+            "environmentType": "Sandbox",
+            "environmentName": "SVILUPPO",
+            "sessionId": 40757,
+            "breakOnNext": "WebClient",
+            "executionContext": "DebugAndProfile",
+            "tenant": "07663b3c-b0c3-4272-9a4d-cee5a0d9a97a"
+        }
+    ]
+}

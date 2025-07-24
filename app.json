@@ -1,0 +1,46 @@
+{
+    "id": "89c0a5ea-ba38-4f01-a487-626b6f9c8add",
+    "name": "AL Project_Mazzoni",
+    "publisher": "Default Publisher",
+    "version": "25.1.0.1",
+    "applicationInsightsConnectionString": "",
+    "brief": "",
+    "description": "",
+    "privacyStatement": "",
+    "EULA": "",
+    "help": "",
+    "url": "",
+    "logo": "",
+    "dependencies": [
+        {
+            "id": "d1ff8259-47fb-4a8d-a3b8-4a37f4aa27a6",
+            "name": "Qgs.Mazzoni_Group.Model",
+            "publisher": "Qgs",
+            "version": "25.0.0.0"
+        },
+        {
+            "id": "b3b8e132-0ba8-4429-9e94-851829ceb7a3",
+            "name": "Electronic Invoice for Italy",
+            "publisher": "EOS Solutions",
+            "version": "25.0.116.0"
+        }
+    ],
+    "screenshots": [],
+    "platform": "1.0.0.0",
+    "application": "25.5.30849.31109",
+    "idRanges": [
+        {
+            "from": 50000,
+            "to": 59999
+        }
+    ],
+    "resourceExposurePolicy": {
+        "allowDebugging": true,
+        "allowDownloadingSource": false,
+        "includeSourceInSymbolFile": false
+    },
+    "runtime": "14.0",
+    "features": [
+        "NoImplicitWith"
+    ]
+}

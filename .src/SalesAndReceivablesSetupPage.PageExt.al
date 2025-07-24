@@ -1,0 +1,15 @@
+pageextension 50001 SalesAndReceivablesSetupPage extends "Sales & Receivables Setup"
+{
+    layout
+    {
+        addlast(General)
+        {
+            field("Same Doc./Occurr./Post. Date"; rec."Same Doc./Occurr./Post. Date")
+            {
+                ApplicationArea = All;
+                Caption = 'Stessa data documento/esec. operazione/registrazione';
+                ToolTip = 'Specifica se si vuole controllare che la data doc., data es. op. e la data reg. siano tutte uguali';
+            }
+        }
+    }
+}
