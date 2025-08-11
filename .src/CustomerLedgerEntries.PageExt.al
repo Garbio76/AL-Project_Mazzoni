@@ -1,10 +1,19 @@
 pageextension 50002 CustomerLedgerEntries extends "Customer Ledger Entries"
 {
+
     layout
     {
         addlast(Control1)
         {
 
+            field("Severity Level"; ISeverityLevel)
+
+            {
+                ApplicationArea = All;
+                Caption = 'Livello severità ultimo sollecito emesso';
+                ToolTip = 'Specifica il livello di severità dell''ultimo soll. emesso';
+                Editable = false;
+            }
             field("Latest Issued Reminder No."; rec."Latest Issued Reminder No.")
 
             {
@@ -13,7 +22,7 @@ pageextension 50002 CustomerLedgerEntries extends "Customer Ledger Entries"
                 ToolTip = 'Specifica il nr. ultimo sollecito emesso';
                 Editable = false;
             }
-            field("Latest Issued Reminder Date"; rec."Latest Issued Reminder Date")
+            field("Latest Issued Reminder Date"; DtLatestIssuedRemDate)
             {
                 ApplicationArea = All;
                 Caption = 'Data ultimo sollecito emesso';
@@ -32,18 +41,28 @@ pageextension 50002 CustomerLedgerEntries extends "Customer Ledger Entries"
         }
     }
     var
-        lRcRemFinChaEntRec: Record "Reminder/Fin. Charge Entry";
+        lRcIssuedRemHeader: Record "Issued Reminder Header";
+        ISeverityLevel: Integer;
+        DtLatestIssuedRemDate: Date;
 
-        
-        trigger OnAfterGetRecord()
+    trigger OnAfterGetRecord()
 
     begin
-
-        lRcRemFinChaEntRec.Reset();
-        lRcRemFinChaEntRec.SetRange("No.", rec."Latest Issued Reminder No.");
-            If lRcRemFinChaEntRec.FindLast() then
-            rec."Latest Issued Reminder Date" := lRcRemFinChaEntRec."Document Date";
-
+        if lRcIssuedRemHeader.Get(Rec."Latest Issued Reminder No.") then begin
+            DtLatestIssuedRemDate := lRcIssuedRemHeader."Document Date";
+            ISeverityLevel := lRcIssuedRemHeader."Reminder Level";
+        end
+        else begin
+            DtLatestIssuedRemDate := 0D;
+            ISeverityLevel := 0;
+        end;
     end;
+
+
+
+
+
+
+
 
 }
