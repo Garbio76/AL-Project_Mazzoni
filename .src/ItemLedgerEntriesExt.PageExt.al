@@ -1,3 +1,6 @@
+namespace AL_Project_Mazzoni.Default_Publisher;
+using Microsoft.Inventory.Item;
+using Microsoft.Inventory.Ledger;
 #pragma warning disable AA0247
 pageextension 50004 ItemLedgerEntriesExt extends "Item Ledger Entries"
 #pragma warning restore AA0247
@@ -19,14 +22,13 @@ pageextension 50004 ItemLedgerEntriesExt extends "Item Ledger Entries"
         {
             field("Qty. per SoM"; DcQtyPerSoM)
             {
-                Caption = 'Qtà per unità di misura secondaria';
-                ToolTip = 'Visualizza la quantità per unità di misura secondaria dell''articolo';
+                Caption = 'Qtà per unità di misura effetiva del mov.';
+                ToolTip = 'Visualizza la quantità per unità di misura effettiva del movimento';
                 ApplicationArea = All;
                 Editable = false;
             }
         }
     }
-
     var
         RcItem: Record "Item";
         CBaseUoM: Code[10];
@@ -35,15 +37,8 @@ pageextension 50004 ItemLedgerEntriesExt extends "Item Ledger Entries"
     trigger OnAfterGetRecord()
     begin
         if RcItem.Get(Rec."Item No.") then begin
-            ;
-            CBaseUoM := RcItem."Base Unit of Measure"
-        end;
-
-        if (CBaseUoM = Rec."Unit of Measure Code") then
-            DcQtyPerSoM := 0
-        else
+            CBaseUoM := RcItem."Base Unit of Measure";
             DcQtyPerSoM := Rec.Quantity / Rec."Qty. per Unit of Measure"
+        end;
     end;
-
 }
-

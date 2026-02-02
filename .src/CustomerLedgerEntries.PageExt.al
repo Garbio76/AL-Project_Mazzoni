@@ -1,11 +1,12 @@
-pageextension 50002 CustomerLedgerEntries extends "Customer Ledger Entries"
+namespace AL_Project_Mazzoni.Default_Publisher;
+using Microsoft.Sales.Receivables;
+using Microsoft.Sales.Reminder;
+pageextension 50006 CustomerLedgerEntries extends "Customer Ledger Entries"
 {
-
     layout
     {
         addlast(Control1)
         {
-
             field("Severity Level"; ISeverityLevel)
 
             {
@@ -15,7 +16,6 @@ pageextension 50002 CustomerLedgerEntries extends "Customer Ledger Entries"
                 Editable = false;
             }
             field("Latest Issued Reminder No."; rec."Latest Issued Reminder No.")
-
             {
                 ApplicationArea = All;
                 Caption = 'Nr. ultimo sollecito emesso';
@@ -28,10 +28,8 @@ pageextension 50002 CustomerLedgerEntries extends "Customer Ledger Entries"
                 Caption = 'Data ultimo sollecito emesso';
                 ToolTip = 'Specifica la data ultimo sollecito emesso';
                 Editable = false;
-
             }
             field("Internal Salesperson Code"; rec."Internal Salesperson Code")
-
             {
                 ApplicationArea = All;
                 Caption = 'Canale vendita interno';
@@ -44,7 +42,6 @@ pageextension 50002 CustomerLedgerEntries extends "Customer Ledger Entries"
         lRcIssuedRemHeader: Record "Issued Reminder Header";
         ISeverityLevel: Integer;
         DtLatestIssuedRemDate: Date;
-
     trigger OnAfterGetRecord()
 
     begin
@@ -57,12 +54,4 @@ pageextension 50002 CustomerLedgerEntries extends "Customer Ledger Entries"
             ISeverityLevel := 0;
         end;
     end;
-
-
-
-
-
-
-
-
 }

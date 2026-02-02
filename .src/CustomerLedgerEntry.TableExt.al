@@ -1,8 +1,11 @@
+namespace AL_Project_Mazzoni.Default_Publisher;
+using Microsoft.Sales.Customer;
+using Microsoft.Sales.FinanceCharge;
+using Microsoft.Sales.Receivables;
 tableextension 50002 CustomerLedgerEntry extends "Cust. Ledger Entry"
 {
     fields
     {
-
         field(50000; "Latest Issued Reminder No."; Code[20])
         {
             Caption = 'Nr. ultimo sollecito emesso';
@@ -10,15 +13,11 @@ tableextension 50002 CustomerLedgerEntry extends "Cust. Ledger Entry"
             CalcFormula = max("Reminder/Fin. Charge Entry"."No." where("Document No." = field("Document No."),
             "Reminder Level" = field("Last Issued Reminder Level")));
         }
-
         field(50001; "Internal Salesperson Code"; Code[20])
         {
             Caption = 'Cod. canale di vendita interno';
             FieldClass = FlowField;
             CalcFormula = lookup(Customer."Internal Salesperson Code" where("No." = field("Customer No.")));
         }
-
     }
-
-
 }

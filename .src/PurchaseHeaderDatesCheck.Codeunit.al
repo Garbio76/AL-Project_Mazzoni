@@ -1,3 +1,6 @@
+namespace AL_Project_Mazzoni.Default_Publisher;
+using Microsoft.Purchases.Document;
+using Microsoft.Purchases.Setup;
 codeunit 50000 PurchaseHeaderDatesCheck
 {
     [EventSubscriber(ObjectType::Table, Database::"Purchase Header", OnBeforeSendToPosting, '', true, true)]
@@ -17,7 +20,4 @@ codeunit 50000 PurchaseHeaderDatesCheck
         if PurchaseHeader."Posting Date" > WorkDate() then
             Message('Data registrazione successiva alla workdate.');
     end;
-
-
-
 }

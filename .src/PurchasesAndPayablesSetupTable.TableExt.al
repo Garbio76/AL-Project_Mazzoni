@@ -1,3 +1,5 @@
+namespace AL_Project_Mazzoni.Default_Publisher;
+using Microsoft.Purchases.Setup;
 tableextension 50000 PurchasesAndPayablesSetUpTable extends "Purchases & Payables Setup"
 {
     fields
@@ -7,9 +9,6 @@ tableextension 50000 PurchasesAndPayablesSetUpTable extends "Purchases & Payable
             DataClassification = ToBeClassified;
             Caption = 'Data doc. e/o data reg. successiva alla workdate';
             InitValue = false;
-
         }
     }
-
-
 }

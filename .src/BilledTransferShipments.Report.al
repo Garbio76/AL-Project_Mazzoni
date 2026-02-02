@@ -1,3 +1,6 @@
+namespace AL_Project_Mazzoni.Default_Publisher;
+using Microsoft.Inventory.Transfer;
+using Microsoft.Sales.History;
 report 50003 BilledTransferShipments
 {
     UsageCategory = ReportsAndAnalysis;
@@ -8,7 +11,6 @@ report 50003 BilledTransferShipments
     dataset
     {
         dataitem("Transfer Shipment Header"; "Transfer Shipment Header")
-
         {
             RequestFilterFields = "Posting Date";
 
@@ -33,12 +35,8 @@ report 50003 BilledTransferShipments
                 column(Amount_Including_VAT; "Amount Including VAT") { IncludeCaption = true; }
                 column(Remaining_Amount; "Remaining Amount") { IncludeCaption = true; }
             }
-
         }
-
-
     }
-
     rendering
     {
         layout("BilledTransferShipments")
@@ -47,6 +45,4 @@ report 50003 BilledTransferShipments
             LayoutFile = 'BilledTransferShipments.rdl';
         }
     }
-
-
 }

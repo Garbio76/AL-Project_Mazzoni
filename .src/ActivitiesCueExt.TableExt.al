@@ -1,3 +1,6 @@
+namespace AL_Project_Mazzoni.Default_Publisher;
+using Microsoft.RoleCenters;
+using Microsoft.Sales.Reminder;
 tableextension 50003 ActivitiesCueExt extends "Activities Cue"
 {
     fields
@@ -13,7 +16,7 @@ tableextension 50003 ActivitiesCueExt extends "Activities Cue"
         {
             Caption = 'Unposted Electronic Invoices';
             FieldClass = FlowField;
-            CalcFormula = count("EOS Inb. EDoc. Header" where("EOS Status" = filter(Preview|"Purch. Header"|Warning|OK|"To Process")));
+            CalcFormula = count("EOS Inb. EDoc. Header" where("EOS Status" = filter(Preview | "Purch. Header" | Warning | OK | "To Process")));
         }
     }
 }

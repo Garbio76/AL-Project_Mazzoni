@@ -1,8 +1,8 @@
+namespace AL_Project_Mazzoni.Default_Publisher;
+using Microsoft.Purchases.Setup;
 pageextension 50000 PurchasesAndPayablesSetUpPage extends "Purchases & Payables Setup"
 {
     layout
-
-
     {
         addlast(General)
         {
@@ -12,9 +12,6 @@ pageextension 50000 PurchasesAndPayablesSetUpPage extends "Purchases & Payables 
                 ToolTip = 'Specifica se impedire che la data documento e/o data registrazione sia successiva alla data di lavoro';
                 ApplicationArea = All;
             }
-            
         }
-        
     }
-
 }

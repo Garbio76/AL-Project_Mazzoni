@@ -1,3 +1,5 @@
+namespace AL_Project_Mazzoni.Default_Publisher;
+using Microsoft.Sales.Reminder;
 pageextension 50003 O365ActivitiesExt extends "O365 Activities"
 {
     layout
