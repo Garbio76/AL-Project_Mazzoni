@@ -6,8 +6,7 @@ report 50003 BilledTransferShipments
     UsageCategory = ReportsAndAnalysis;
     ApplicationArea = All;
     Caption = 'Spedizioni trasferimento fatturate';
-    DefaultRenderingLayout = BilledTransferShipments;
-
+    DefaultRenderingLayout = ".src\report\Billed Transfer Shipments.rdlc";
     dataset
     {
         dataitem("Transfer Shipment Header"; "Transfer Shipment Header")
@@ -39,10 +38,10 @@ report 50003 BilledTransferShipments
     }
     rendering
     {
-        layout("BilledTransferShipments")
+        layout(".src\report\Billed Transfer Shipments.rdlc")
         {
             Type = RDLC;
-            LayoutFile = 'BilledTransferShipments.rdl';
+            LayoutFile = '.src\report\Billed Transfer Shipments.rdl';
         }
     }
 }
