@@ -9,7 +9,7 @@ pageextension 50007 SalesInvoiceExt extends "Sales Invoice"
             trigger
             OnAfterValidate()
             begin
-                Message('Necessario eseguire il ricalcolo dei pagamenti!');
+                Message('Necessario eseguire il ricalcolo dei pagamenti.');
             end;
         }
     }
