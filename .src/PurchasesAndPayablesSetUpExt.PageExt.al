@@ -1,6 +1,6 @@
 namespace AL_Project_Mazzoni.Default_Publisher;
 using Microsoft.Purchases.Setup;
-pageextension 50000 PurchasesAndPayablesSetUpPage extends "Purchases & Payables Setup"
+pageextension 50000 PurchasesAndPayablesSetUpExt extends "Purchases & Payables Setup"
 {
     layout
     {

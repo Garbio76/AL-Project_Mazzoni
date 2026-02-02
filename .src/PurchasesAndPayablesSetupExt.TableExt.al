@@ -1,6 +1,6 @@
 namespace AL_Project_Mazzoni.Default_Publisher;
 using Microsoft.Purchases.Setup;
-tableextension 50000 PurchasesAndPayablesSetUpTable extends "Purchases & Payables Setup"
+tableextension 50000 PurchasesAndPayablesSetUpExt extends "Purchases & Payables Setup"
 {
     fields
     {

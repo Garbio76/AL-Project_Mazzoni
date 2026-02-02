@@ -1,7 +1,7 @@
 namespace AL_Project_Mazzoni.Default_Publisher;
 using Microsoft.Finance.RoleCenters;
 using System.Integration.PowerBI;
-pageextension 50005 BusinessManRoleCenterPageExt extends "Business Manager Role Center"
+pageextension 50005 BusinessManRoleCenterExt extends "Business Manager Role Center"
 {
     layout
     {

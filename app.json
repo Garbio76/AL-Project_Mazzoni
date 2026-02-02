@@ -2,7 +2,7 @@
     "id": "89c0a5ea-ba38-4f01-a487-626b6f9c8add",
     "name": "AL Project_Mazzoni",
     "publisher": "Default Publisher",
-    "version": "26.5.1.3",
+    "version": "26.5.2.0",
     "applicationInsightsConnectionString": "",
     "brief": "",
     "description": "",
@@ -22,7 +22,13 @@
             "id": "d1ff8259-47fb-4a8d-a3b8-4a37f4aa27a6",
             "name": "Qgs.Mazzoni_Group.Model",
             "publisher": "Qgs",
-            "version": "25.0.3.2"
+            "version": "26.0.0.0"
+        },
+        {
+            "id": "00ad6d65-53ba-407a-bf8c-e62aba02d52d",
+            "name": "Qgs.Mazzoni_Group.Project",
+            "publisher": "Qgs",
+            "version": "26.0.0.0"
         },
         {
             "id": "b3b8e132-0ba8-4429-9e94-851829ceb7a3",

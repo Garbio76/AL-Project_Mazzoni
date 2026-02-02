@@ -1,7 +1,7 @@
 namespace AL_Project_Mazzoni.Default_Publisher;
 using Microsoft.Sales.Receivables;
 using Microsoft.Sales.Reminder;
-pageextension 50006 CustomerLedgerEntries extends "Customer Ledger Entries"
+pageextension 50006 CustomerLedgerEntriesExt extends "Customer Ledger Entries"
 {
     layout
     {

@@ -2,7 +2,7 @@ namespace AL_Project_Mazzoni.Default_Publisher;
 using Microsoft.Sales.Customer;
 using Microsoft.Sales.FinanceCharge;
 using Microsoft.Sales.Receivables;
-tableextension 50002 CustomerLedgerEntry extends "Cust. Ledger Entry"
+tableextension 50002 CustomerLedgerEntryExt extends "Cust. Ledger Entry"
 {
     fields
     {

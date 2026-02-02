@@ -1,6 +1,6 @@
 namespace AL_Project_Mazzoni.Default_Publisher;
 using Microsoft.Sales.Setup;
-tableextension 50001 SalesAndReceivablesSetupTable extends "Sales & Receivables Setup"
+tableextension 50001 SalesAndReceivablesSetupExt extends "Sales & Receivables Setup"
 {
     fields
     {
